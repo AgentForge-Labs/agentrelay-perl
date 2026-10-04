@@ -1,0 +1,8 @@
+Revision history for AgentForge-AgentRelay
+
+0.1.0  2026-10-04
+    - Initial official hosted AgentRelay Perl client.
+    - Managed-origin API-key/Bearer authentication.
+    - Send, reply, file, inbox and download helpers.
+    - OpenAPI-generated operation table and pinned contract snapshot.
+    - Stable idempotency across retries and structured secret-safe errors.

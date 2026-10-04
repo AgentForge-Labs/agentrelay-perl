@@ -1,0 +1,12 @@
+Changes
+CPAN-PUBLISHING.md
+LICENSE
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+README.md
+lib/AgentForge/AgentRelay.pm
+lib/AgentForge/AgentRelay/Generated.pm
+share/openapi.snapshot.json
+t/00-load.t
+t/01-client.t
