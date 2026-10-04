@@ -22,3 +22,24 @@ secrets and must never be committed, logged, or bundled in the distribution.
 The current repository has no PAUSE/CPAN upload secret configured. Until an
 authorized PAUSE credential is added, the release workflow can build and
 validate the exact CPAN tarball but cannot perform the final public upload.
+
+
+## Current publication status (2026-10-04)
+
+The tested 0.1.0 source tree is public at
+`https://github.com/AgentForge-Labs/agentrelay-perl`.
+
+The live MetaCPAN release endpoint for `AgentForge-AgentRelay` currently
+returns HTTP 404 / `Not found`, confirming that no CPAN release has been
+uploaded yet.
+
+The commercial repository currently exposes only the repository-level
+`PYPI_API_TOKEN` Actions secret and only a `pypi` deployment environment.
+There is no `PAUSE_USER` or `PAUSE_PASSWORD` credential and no configured
+`cpan` environment with publication credentials. The release workflow
+therefore intentionally fails closed before upload until an authorized
+AgentForge Labs PAUSE credential is configured.
+
+Once those PAUSE credentials are added, the workflow rebuilds the exact
+versioned tarball, uploads it with CPAN::Uploader, waits for the MetaCPAN
+release to become visible, and performs a clean public-CPAN install smoke.
